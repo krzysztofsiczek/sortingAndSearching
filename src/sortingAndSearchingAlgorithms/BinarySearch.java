@@ -22,10 +22,8 @@ public class BinarySearch implements Search {
 				return true;
 			} else if (toFound.compareTo(list.get(middleofArray)) < 0) {
 				endOfArray = middleofArray - 1;
-				binarySearch(list, beginningOfArray, endOfArray, toFound);
 			} else {
 				beginningOfArray = middleofArray + 1;
-				binarySearch(list, beginningOfArray, endOfArray, toFound);
 			}
 		}
 		return false;
