@@ -28,7 +28,7 @@ public class Main {
 		searchAlgorithms.add(new LinearSearch());
 		boolean searchResult;
 		for (Search item : searchAlgorithms) {
-			int poszukiwany = 333;
+			int poszukiwany = 32;
 			searchResult = item.search(tablica, poszukiwany);
 			if (searchResult) {
 				System.out.println("Znaleziono " + poszukiwany);

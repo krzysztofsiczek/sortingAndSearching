@@ -2,7 +2,7 @@ package sortingAndSearchingAlgorithms;
 
 import java.util.ArrayList;;
 
-public class BinarySearch implements Search{
+public class BinarySearch implements Search {
 
 	public BinarySearch() {
 	}
@@ -18,20 +18,16 @@ public class BinarySearch implements Search{
 
 		while (beginningOfArray <= endOfArray) {
 			int middleofArray = beginningOfArray + ((endOfArray - beginningOfArray) / 2);
-			switch (toFound.compareTo(list.get(middleofArray))) {
-			case 0:
+			if (toFound.compareTo(list.get(middleofArray)) == 0) {
 				return true;
-			case -1:
+			} else if (toFound.compareTo(list.get(middleofArray)) < 0) {
 				endOfArray = middleofArray - 1;
 				binarySearch(list, beginningOfArray, endOfArray, toFound);
-				break;
-			case 1:
+			} else {
 				beginningOfArray = middleofArray + 1;
 				binarySearch(list, beginningOfArray, endOfArray, toFound);
-				break;
 			}
 		}
 		return false;
 	}
-
 }
