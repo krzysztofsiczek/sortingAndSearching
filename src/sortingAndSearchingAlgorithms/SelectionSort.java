@@ -23,7 +23,7 @@ public class SelectionSort extends SwapTwoElementsInArray implements Sort {
 	}
 
 	private <T extends Comparable<? super T>> int getLength(ArrayList<T> dane) {
-		return length = dane.size();
+		return dane.size();
 	}
 
 	private <T extends Comparable<? super T>> int getIndexOfSmallestElement(ArrayList<T> dane, int i) {

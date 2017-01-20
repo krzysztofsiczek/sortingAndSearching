@@ -10,6 +10,8 @@ public class Main {
 		ArrayList<Integer> tablica = init();
 
 		List<Sort> sortingAlgorithms = new ArrayList<>();
+		sortingAlgorithms.add(new MergeSort());
+		sortingAlgorithms.add(new MergeSortInPlace());
 		sortingAlgorithms.add(new BubbleSort());
 		sortingAlgorithms.add(new HeapSort());
 		sortingAlgorithms.add(new InsertionSort());

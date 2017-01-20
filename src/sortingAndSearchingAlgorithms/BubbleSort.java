@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class BubbleSort extends SwapTwoElementsInArray implements Sort{
 
-	private int lengthOfUnsortedPartOfArray;
-
 	public BubbleSort() {
 	}
 	
@@ -14,10 +12,10 @@ public class BubbleSort extends SwapTwoElementsInArray implements Sort{
 	}
 	
 	private <T extends Comparable<? super T>> void bubbleSort(ArrayList<T> dane) {
-		for (lengthOfUnsortedPartOfArray = getArrayLength(dane); lengthOfUnsortedPartOfArray > 0; lengthOfUnsortedPartOfArray--) {
-			for (int i = 0; i < lengthOfUnsortedPartOfArray - 1; i++) {
-				if ((dane.get(i).compareTo(dane.get(i + 1))) > 0) {
-					swap(dane, i);
+		for (int i = getArrayLength(dane); i > 0; i--) {
+			for (int j = 0; j < i - 1; j++) {
+				if ((dane.get(j).compareTo(dane.get(j + 1))) > 0) {
+					swap(dane, j);
 				}
 			}
 		}

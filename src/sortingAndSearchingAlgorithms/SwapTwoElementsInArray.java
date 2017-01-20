@@ -2,7 +2,7 @@ package sortingAndSearchingAlgorithms;
 
 import java.util.ArrayList;
 
-public abstract class SwapTwoElementsInArray implements SwapTwoElements{
+public abstract class SwapTwoElementsInArray implements Swap{
 
 	@Override
 	public <T extends Comparable<? super T>> void swap(ArrayList<T> arrayList, int firstElementToSwap, int SecondElementToSwap) {
